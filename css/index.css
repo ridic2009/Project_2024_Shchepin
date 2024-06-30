@@ -1,0 +1,294 @@
+@import url("./vars.css");
+@import url("./fonts.css");
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: var(--color-black);
+  color: #fff;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  gap: 8px;
+}
+
+.logo span {
+  font-family: "Comfortaa";
+  font-size: 24px;
+}
+
+.logo img {
+  width: 48px;
+  height: 48px;
+}
+
+.searchbar {
+  padding: 16px 16px 16px 48px;
+  background-color: #303030;
+  background-image: url("/assets/svg/search.svg");
+  background-repeat: no-repeat;
+  background-position: 8px;
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.auth-btn {
+  padding: 4px 32px;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: filter 0.2s ease;
+}
+
+.auth-btn:hover {
+  filter: brightness(1.2);
+}
+
+.backdrop {
+  width: 100vw;
+  height: 100svh;
+  background-color: #0000005b;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth__modal {
+  background-color: #fff;
+  padding: 48px;
+  border-radius: 16px;
+}
+
+.auth__modal-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.auth__modal-input {
+  width: 540px;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth__modal-input:not(:first-child) {
+  margin-top: 32px;
+}
+
+.auth__modal-input label {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.auth__modal-input input {
+  padding: 16px 24px;
+  border: 1px solid var(--color-black);
+  margin-top: 8px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 18px;
+}
+
+.redirect-btn {
+  margin-top: 32px;
+  color: var(--color-primary);
+  text-decoration: underline;
+  background: none;
+  padding: 0;
+  font-size: 16px;
+}
+
+.auth__modal-btn {
+  width: 100%;
+  padding: 16px 0;
+  border-radius: 8px;
+  margin-top: 64px;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.auth__modal-btn:hover {
+  filter: brightness(1.2);
+}
+
+.ad-banner {
+  margin-top: 64px;
+}
+
+.ad-banner img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.course__catalog {
+  margin-top: 128px;
+}
+
+.course__catalog h2 {
+  font-size: 32px;
+}
+
+.course__catalog-list {
+  display: flex;
+  gap: 45px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.course__card {
+  width: 360px;
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: 0px 0px 16px 2px rgba(51, 51, 51, 0.08);
+  border-radius: 8px;
+}
+
+.course__card-wrapper {
+  padding: 16px;
+}
+
+.course__card-banner {
+  width: 100%;
+  object-fit: cover;
+  max-height: 128px;
+  border-radius: 8px 8px 0 0;
+}
+
+.course__card-author {
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.course__card-inner {
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.course__card-price {
+  color: var(--color-primary);
+  font-size: 22px;
+}
+
+.course__card-duration {
+  color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.course__card-duration::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url("/assets/svg/clock.svg");
+}
+
+.authors {
+  margin-top: 128px;
+}
+
+.authors__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.authors__card {
+  width: 360px;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0px 0px 16px 2px rgba(51, 51, 51, 0.08);
+  border-radius: 8px;
+  display: flex;
+}
+
+.authors__card-title {
+  margin-bottom: 8px;
+}
+
+.authors__card-avatar {
+  border-radius: 8px;
+  margin-right: 8px;
+  width: 64px;
+  height: 64px;
+}
+
+.authors__card-rating span,
+.authors__card-count span {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.authors__card-rating,
+.authors__card-count {
+  display: inline-block;
+  font-size: 14px;
+}
+
+.authors__card-count {
+  margin-right: 16px;
+}
+
+.footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 32px;
+  margin-top: 128px;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__nav h2 {
+  font-size: 32px;
+}
+
+.footer__nav-list {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.footer__nav-item a {
+  color: #fff;
+  transition: color 0.2s ease-in;
+}
+
+.footer__nav-item a:hover {
+  color: var(--color-primary);
+}
